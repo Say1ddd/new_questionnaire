@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->enum('type', ['multiple', 'essay'])->default('multiple');
-            $table->decimal('score');
+            $table->decimal('score', 8, 2)->nullable();
             $table->timestamps();
         });
     }

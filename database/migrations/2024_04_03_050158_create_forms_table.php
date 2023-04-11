@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->enum('status', ['draft', 'published', 'closed'])->default('draft');
             $table->enum('visibility', ['private', 'public', 'link_only'])->default('private');
+            $table->boolean('has_score')->default(false);
             $table->dateTime('expired_at')->nullable();
             $table->timestamps();
         });
