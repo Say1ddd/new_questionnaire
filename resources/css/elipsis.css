@@ -1,0 +1,11 @@
+.description-container {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
