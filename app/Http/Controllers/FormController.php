@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class FormController extends Controller
 {
@@ -12,7 +13,10 @@ class FormController extends Controller
      */
     public function index()
     {
-        //
+        $forms = Form::with('creator')->get();
+        return Inertia::render('Discovery', [
+            'forms' => $forms
+        ]);
     }
 
     /**
